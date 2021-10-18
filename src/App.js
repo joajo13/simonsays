@@ -32,6 +32,7 @@ function App() {
     else{
       setPlay(initPlay)
     }
+    // eslint-disable-next-line
   }, [isOn])
 
 
@@ -46,13 +47,14 @@ function App() {
       setPlay({...play, colors:copyColors})
 
     }
-
+    // eslint-disable-next-line
   }, [isOn, play.isDisplay])
 
   useEffect(() => {
     if(isOn && play.isDisplay && play.colors.length){
       displayColors()
     }
+    // eslint-disable-next-line
   }, [isOn, play.isDisplay, play.colors.length])
 
   async function displayColors() {
